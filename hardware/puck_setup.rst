@@ -101,21 +101,12 @@ IPv4 Settings
 
     Automatic (DHCP)
 
+MISC
+*********
 
-Misc / OLD / Devel
-************************
 
 IPv4 Settings
-------------------
-To add the LiDAR, select the ``Method`` to be ``Manual``, then select ``Add`` and add the IP address.
-
-.. note:: To get the IP address of the LiDAR, there are several options, but
-  ::
-
-    ifconfig
+----------------
 
 
-May be able to follow `this post <https://askubuntu.com/questions/628383/output-only-mac-address-on-ubuntu>`_ and type:
-::
-
-  ifconfig -a | grep -Po 'HWaddr \K.*$'
+    route -n

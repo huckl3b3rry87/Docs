@@ -105,6 +105,12 @@ To automatically `fetch and merge from a remote <https://git-scm.com/book/id/v2/
 
   git pull upstream master
 
+
+Remove submodule:
+::
+
+  git rm --cached the_submodule_path
+
 Create a disconnected git branch
 ------------------------------------
 
