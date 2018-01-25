@@ -35,7 +35,7 @@ Which gives something like (desktop):
             RX bytes:145501992 (145.5 MB)  TX bytes:145501992 (145.5 MB)
 
 
-.. warning:: Note that the device is ``eno1``, not ``eth0``. Also, on my laptop the device name is `enp0s25`, so it is different depending on the machine.
+.. warning:: Note that the device is ``eno1``, not ``eth0``. Also, on my laptop the device name is ``enp0s25``, so it is different depending on the machine.
 
 Then do (desktop):
 ::
@@ -51,7 +51,7 @@ Then do (laptop):
 	sudo ip addr add 192.168.1.200 dev enp0s25
 	sudo route add -net 192.168.1.0 netmask 255.255.255.0 dev enp0s25
 
-Next got to: `Network` -> `Options`... and click `Ethernet Settings`
+Next got to: ``Network`` -> ``Options...`` and click ``Ethernet Settings``
 
 Ethernet Settings
 ------------------
@@ -62,9 +62,10 @@ Type the LiDAR's cloned MAC address in the box.
 
     60:76:88:10:47:F9
 
-.. warning::  If you are trying to get the Internet back delete the MAC address in the box.
+.. note::
+		* Now you can change the name of the network to something, perhaps ``LiDAR`` in ``Edit Connections...``
 
-Now you can change the name of the network to something, perhaps `LiDAR`.
+		* To see information about the connection check out ``Connection Information``.
 
 
 Testing the LiDAR
@@ -91,11 +92,13 @@ If you have trouble `these instructions <http://wiki.ros.org/velodyne/Tutorials/
 
 Getting on the Computer back on the Internet
 **********************************************
+.. note:: If you accidentally deleted the Internet connection or messed it up somehow
+
 On the top right of your screen highlight the ``Network`` icon and click ``Edit Connections``. Then click ``Add`` add back the Internet with the following steps.
 
 .. warning:: Make sure that you name the ``LiDAR`` connection and the ``Internet`` connection.
 
-First go to: Network -> Options...
+First go to: ``Network`` -> ``Options...``
 
 Ethernet Settings
 ------------------
@@ -108,12 +111,10 @@ IPv4 Settings
 
     Automatic (DHCP)
 
-MISC
-*********
+Network Commands
+************************
 
+random commands:
+::
 
-IPv4 Settings
-----------------
-
-
-    route -n
+  route -n
