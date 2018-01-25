@@ -6,28 +6,12 @@ Getting on the LiDAR on the Network
 ***************************************
 The basic tutorial is `here <http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20HDL-32E>`_, but you may run into issues like I did. In which case, the following notes may be useful.
 
-First go to: Network -> Options...
-
-Ethernet Settings
-------------------
-Type the LiDAR's cloned MAC address in the box.
-
-.. note:: To find the cloned MAC address for the LiDAR; look at the bottom of the device. For me it is:
-  ::
-
-    60:76:88:10:47:F9
-
-.. warning::  If you are trying to get the Internet back delete the MAC address in the box.
-
-
-IPv4 Settings
-----------------
-To show all devices found:
+First figure out what the devise name is. To show all devices found:
 ::
 
 	ifconfig -a
 
-Which gives something like:
+Which gives something like (desktop):
 ::
 
   febbo@febbo-HP-Z220-SFF-Workstation:~/Documents/workspace/Docs$ ifconfig -a
@@ -51,14 +35,37 @@ Which gives something like:
             RX bytes:145501992 (145.5 MB)  TX bytes:145501992 (145.5 MB)
 
 
-.. warning:: Note that the device is ``eno1``, not ``eth0``!
+.. warning:: Note that the device is ``eno1``, not ``eth0``. Also, on my laptop the device name is `enp0s25`, so it is different depending on the machine.
 
-Then do:
+Then do (desktop):
 ::
 
 	sudo ifconfig eno1 up
 	sudo ip addr add 192.168.1.200 dev eno1
 	sudo route add -net 192.168.1.0 netmask 255.255.255.0 dev eno1
+
+Then do (laptop):
+::
+
+	sudo ifconfig enp0s25 up
+	sudo ip addr add 192.168.1.200 dev enp0s25
+	sudo route add -net 192.168.1.0 netmask 255.255.255.0 dev enp0s25
+
+Next got to: `Network` -> `Options`... and click `Ethernet Settings`
+
+Ethernet Settings
+------------------
+Type the LiDAR's cloned MAC address in the box.
+
+.. note:: To find the cloned MAC address for the LiDAR; look at the bottom of the device. For me it is:
+  ::
+
+    60:76:88:10:47:F9
+
+.. warning::  If you are trying to get the Internet back delete the MAC address in the box.
+
+Now you can change the name of the network to something, perhaps `LiDAR`.
+
 
 Testing the LiDAR
 ***********************
