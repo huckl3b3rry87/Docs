@@ -118,7 +118,7 @@ Getting started
 ----------------
 This tutorial assumes that you are using a command line interface to git, for Windows consider using `cmder <http://cmder.net/>`_ and make sure that you download the full version that has git for Windows. Additionally, `Atom <https://atom.io/>`_ is a useful tool for resolving merge issues visually.
 
-`For a Repository <https://help.github.com/articles/fork-a-repo/>`_
+`Fork a Repository <https://help.github.com/articles/fork-a-repo/>`_
 ----------------------------------------------------------------------
 
 1) Go to `github.com <https://github.com/>`_ and login. If it is a private repo that you will be collaborating on, then accept any invitations to collaborate.
