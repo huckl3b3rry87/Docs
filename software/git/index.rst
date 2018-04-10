@@ -180,7 +180,55 @@ To make sure that you are using the most recent version of the upstream (or orig
 
 Example 2
 ------------
-Each day that you make changes you can push them to your local repository. If you are using the Atom text editior, this is very easy to do open the ``Packages`` tab and scroll down to ``Github`` and click ``Toggle Git Tab``. 
+Each day that you make changes you can push them to your local repository.
+
+Option 1 (using Atom)
+^^^^^^^^^^^^^^^^^^^^^^^
+If you are using the Atom text editor, this is very easy to do.
+
+1)  open the ``Packages`` tab and scroll down to ``Github`` and click ``Toggle Git Tab``.
+
+2) Click ``Stage All`` to stage the changes
+
+3) Write a commit message and click ``Commit``
+
+4) Under the ``Commit`` button push the ``up`` arrow then click ``Push``
+
+5) Put in your git user info
+
+Option 2 (using terminal)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+1) add changes:
+::
+
+  git add -A
+
+2) commit changes
+::
+
+  git commit -m "updated docs"
+
+3) push changes
+::
+
+  git push origin master
+
+
+Example 3
+----------
+This example is for when you are ready to commit to the upstream repo, this example shows you how to make a ``pull request``.
+
+.. note: Good practice is to stay synced with the upstream repo. So, run Example 1 before this example to make sure that there are no merge conflicts that need to be resolved.
+
+Assuming that, your local changes have all been committed to the local repo you can easily make a pull request at::
+::
+
+  https://github.com/TulgaErsal/PhD.git
+
+Just click the ``New Pull Request`` button.
+
+This will then alert the original repo owner and they can then merge your changes.
+
 
 Create a disconnected git branch
 ===================================
