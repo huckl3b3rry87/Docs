@@ -119,6 +119,7 @@ This tutorial assumes that you are using a command line interface to git, for Wi
 
 `For a Repository <https://help.github.com/articles/fork-a-repo/>`_
 ----------------------------------------------------------------------
+
 1) Go to `github.com <https://github.com/>`_ and login. If it is a private repo that you will be collaborating on, then accept any invitations to collaborate.
 
 2) Navigate to the repo that you will be collaberating on i.e.:
@@ -234,6 +235,7 @@ Create a disconnected git branch
 ===================================
 
 1) start with a fresh copy of the repo
+
 2) Create a new disconnected branch:
 ::
 
