@@ -111,7 +111,8 @@ Remove submodule:
 
 Basics of Collaborating on git
 ===========================================
-This is a beginners guide to collaborating on git. Several examples will be provided.
+This is a beginners guide to collaborating on git. Several examples will be provided assuming ``TulgaErsal`` is collaborating with ``huckl3b3rry87`` on the ``PhD`` repo.
+
 
 Getting started
 ----------------
@@ -134,7 +135,7 @@ This tutorial assumes that you are using a command line interface to git, for Wi
 
   cd Documents\workspace\
 
-5) in the terminal, clone the forked repo that you will be collaberating on:
+5) in the terminal, clone the forked repo that you will be collaborating on:
 ::
 
   git clone https://github.com/TulgaErsal/PhD
