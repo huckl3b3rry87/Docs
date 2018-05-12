@@ -1,14 +1,14 @@
 git
-=====
+*****
 
 Website links
---------------
+==================
 
 * https://github.com/
 * The Pro Git book is available `here <https://git-scm.com/book>`_!
 
 Useful Commands
------------------
+===================
 
 add everything to the commit (including new file and files that were deleted):
 ::
@@ -50,6 +50,32 @@ see which branch you are on:
 
   git branch
 
+to make a new branch:
+::
+
+   git checkout -b [name_of_your_new_branch]
+
+to change the working branch:
+::
+
+  git checkout [name_of_your_new_branch]
+
+to push the branch to github:
+::
+
+  git push origin [name_of_your_new_branch]
+
+delete a local branch:
+::
+
+  git branch -d the_local_branch
+
+delete a remote branch:
+::
+
+  git push origin --delete the_remote_branch
+
+
 connecting to github:
 ::
 
@@ -67,10 +93,29 @@ Caching your github password:
   git config --global credential.helper 'cache --timeout=3600'
   # Set the cache to timeout after 1 hour (setting is in seconds)
 
+`Working with Remote Repositories  <https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes>`_
+--------------------------------------------------------------------------------------------------------
+
+To clone a repo:
+::
+
+  git clone https://github.com/CPFL/Autoware
+
+
+To view the remote:
+::
+
+  febbo@febbo-HP-ZBook-17-G2:~/Documents/workspace/Autoware$ git remote -v
+  origin	https://github.com/huckl3b3rry87/Autoware (fetch)
+  origin	https://github.com/huckl3b3rry87/Autoware (push)
+  upstream	https://github.com/CPFL/Autoware.git (fetch)
+  upstream	https://github.com/CPFL/Autoware.git (push)
+
 Removing a remote origin:
 ::
 
   git remote rm origin
+
 
 Setting an origin:
 ::
@@ -94,11 +139,13 @@ remove files that where previously cached that are now in ``.gitignore``:
   git add .
   git commit -am "Removed ignored files"
 
-Update your `branch from the original branch <https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches>`_:
+Update your `fork from the from the upstrean remo <https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches>`_:
 ::
 
   git fetch [name _of_remote]
   git fetch https://github.com/CPFL/Autoware
+
+More info `here <https://help.github.com/articles/syncing-a-fork/>`_
 
 To automatically `fetch and merge from a remote <https://git-scm.com/book/id/v2/Git-Basics-Working-with-Remotes>`_:
 ::
@@ -110,6 +157,20 @@ Remove submodule:
 ::
 
   git rm --cached the_submodule_path
+
+`Merging development branch with master <https://stackoverflow.com/questions/14168677/merge-development-branch-with-master>`_
+------------------------------------------------------------------------------------------------------------------------------------
+Merge ``master`` into ``develpment`` to see if there are any conflicts, so ``master`` remains clean:
+::
+
+  (on branch development)$ git merge master
+  (resolve any merge conflicts if there are any)
+  git checkout master
+  git merge development (there won't be any conflicts now)
+
+<https://stackoverflow.com/questions/27828404/why-does-git-status-show-branch-is-up-to-date-when-changes-exist-upstream>`_
+`Resolving mere conflicts <https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/>`_
+----------------------------------------------------------------------------------------------------------------------
 
 Create a disconnected git branch
 ------------------------------------

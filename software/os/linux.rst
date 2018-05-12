@@ -37,6 +37,10 @@ Never run an executable in root!
 
 Some more info can be found on ` this page <https://www.cyberciti.biz/faq/tar-extract-linux/>`.
 
+To move a folder an all of its contents:
+::
+  mv /path/sourcefolder/* /path/destinationfolder/
+
 To unpack a tar file:
 ::
 

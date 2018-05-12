@@ -11,44 +11,50 @@ Physics simulator organized as a set of modules that has a high-fidelity HMWWV m
 ==========================================================================
 
 Get the `IRRlicht engine <http://irrlicht.sourceforge.net/downloads>`_
---------------------------------
+-------------------------------------------------------------------------
 
 Make sure that you have the required files:
 ::
 
   sudo apt-get install cmake-extras cmake-qt-gui build-essential xorg-dev freeglut3-dev
 
+After `downloading <http://irrlicht.sourceforge.net/?page_id=10`_ unzip:
+::
+
+  sudo unzip /home/febbo/Downloads/irrlicht-1.8.4.zip -d /opt/irrlicht
+
 
 Compile the ``Irrlicht Engine 1.8.4`` as a shared lib:
 ::
 
-  make sharedlib
-  make install
-
-Then finally (the following may not all be needed..):
-::
-
-  sudo rm -f -r /usr/local/lib/../include/irrlicht
-  sudo mkdir -p /usr/local/lib/../include/irrlicht
-  sudo cp ../../include/*.h /usr/local/lib/../include/irrlicht/
-  sudo cp ../../lib/Linux/libIrrlicht.so.1.8.4 /usr/local/lib
-  sudo cd /usr/local/lib && ln -s -f libIrrlicht.so.1.8.4 libIrrlicht.so.1.8
-  sudo cd /usr/local/lib && ln -s -f libIrrlicht.so.1.8 libIrrlicht.so
+  /opt/irrlicht/irrlicht-1.8.4/source/Irrlicht$ sudo make sharedlib
+  /opt/irrlicht/irrlicht-1.8.4/source/Irrlicht$ sudo make install
 
 Chrono
 -------
 `Install instructions <http://www.irrlicht3d.org/wiki/?n=Main.InstallingIrrlicht>`_
 
+Go into ``/opt`` folder:
+::
+
+  sudo mkdir chrono
+  cd chrono
+  sudo mkdir chrono_source
+  sudo mkdir chrono_build
+  cd chrono_source
+
 Clone the master branch into the ``/opt/chrono/chrono_source`` directory:
 ::
 
   sudo git clone -b master https://github.com/projectchrono/chrono.git
-
+  cd chrono
 
 To configure:
 ::
 
   sudo cmake-gui
+
+![Chrono Build](chrono_build.png)
 
 
 Then to build (assuming ninja was used) go into the ``build`` directory and type:
@@ -56,6 +62,9 @@ Then to build (assuming ninja was used) go into the ``build`` directory and type
 
   chrono/chrono_build$ sudo ninja
 
+
+The rest is old....
+--------------------------
 
 `VEHICLE Module <http://api.projectchrono.org/module_vehicle_installation.html>`_
 ------------------
