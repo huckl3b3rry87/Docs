@@ -43,10 +43,10 @@ Go into ``/opt`` folder:
   sudo mkdir chrono_build
   cd chrono_source
 
-Clone the master branch into the ``/opt/chrono/chrono_source`` directory:
+Clone the develop branch into the ``/opt/chrono/chrono_source`` directory:
 ::
 
-  sudo git clone -b master https://github.com/projectchrono/chrono.git
+  sudo git clone -b develop https://github.com/projectchrono/chrono.git
   cd chrono
 
 To configure:
@@ -54,13 +54,18 @@ To configure:
 
   sudo cmake-gui
 
-![Chrono Build](chrono_build.png)
+.. image:: chrono.png
 
 
 Then to build (assuming ninja was used) go into the ``build`` directory and type:
 ::
 
   chrono/chrono_build$ sudo ninja
+
+Then you can modify permissions if desired:
+::
+
+  sudo chmod -R 777 chrono_build/
 
 
 The rest is old....
