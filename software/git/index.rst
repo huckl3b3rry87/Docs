@@ -74,6 +74,11 @@ delete a remote branch:
   git push origin --delete the_remote_branch
 
 
+remove a large file from a commit that has not been pushed to master yet:
+::
+
+  git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+
 connecting to github:
 ::
 
