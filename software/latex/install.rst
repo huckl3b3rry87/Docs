@@ -1,6 +1,10 @@
 Install
 ==========
 
+Use Texmaker and when you change the build directory, make sure that you add build/ before the % to all the commands in configure.
+
+
+
 Install on Ubuntu:
 ------------------
 ::
