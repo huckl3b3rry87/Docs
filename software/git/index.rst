@@ -77,7 +77,8 @@ delete a remote branch:
 remove a large file from a commit that has not been pushed to master yet:
 ::
 
-  git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+  git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch papers/MO3/results/laptop/demoZ/D/videos/Final.mp4' HEAD
+
 
 connecting to github:
 ::
