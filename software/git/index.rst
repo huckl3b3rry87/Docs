@@ -80,6 +80,12 @@ remove a large file from a commit that has not been pushed to master yet:
   git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch papers/MO3/results/laptop/demoZ/D/videos/Final.mp4' HEAD
 
 
+or remove a large folder from a commit that has not been pushed to master yet:
+::
+
+  git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch papers/MO3/results/laptop/demoZ/D/videos/*' -f HEAD
+
+
 connecting to github:
 ::
 
@@ -166,6 +172,8 @@ Remove submodule:
 `Merging development branch with master <https://stackoverflow.com/questions/14168677/merge-development-branch-with-master>`_
 ------------------------------------------------------------------------------------------------------------------------------------
 Merge ``master`` into ``develpment`` to see if there are any conflicts, so ``master`` remains clean:
+
+Merge ``master`` into ``development`` to see if there are any conflicts, so ``master`` remains clean:
 ::
 
   (on branch development)$ git merge master
